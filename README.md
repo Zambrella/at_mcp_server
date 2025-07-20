@@ -10,6 +10,7 @@
 ### [Tools](https://modelcontextprotocol.io/docs/concepts/tools)
 - Get all atkeys
 - Get value of atkey
+- TODO: Other CRUD
 
 
 ### Claude desktop configuration
@@ -23,7 +24,9 @@
 }
 ```
 
-### [MCP Inspector Usage](https://modelcontextprotocol.io/docs/tools/inspector)
+### MCP Inspector Usage
+https://modelcontextprotocol.io/docs/tools/inspector
+
 See `mcp_inspector_config.json` for setup.
 
 Run: `npx @modelcontextprotocol/inspector --config mcp_inspector_config.json --server at-sign-tools`

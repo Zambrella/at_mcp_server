@@ -1,30 +1,28 @@
-import 'dart:io';
-
 import 'package:at_client/at_client.dart';
 import 'package:at_mcp_server/mcp_logging_handler.dart';
 import 'package:at_onboarding_cli/at_onboarding_cli.dart';
 import 'package:at_utils/at_logger.dart';
 
-// TODO: Add the option to pass in root port.
 Future<AtClient> initAtClient({
   required MCPLoggingHandler mcpLoggingHandler,
   required String rootDomain,
-  required String namespace,
+  required int rootPort,
+  required String? namespace,
   required String atsign,
+  required String homeDirectory,
 }) async {
-  // TODO: Could pass in home as an argument because MCP client does pass in HOME environment variable
-  final homeDirectory = Platform.environment['HOME'];
-  final keysPath = '$homeDirectory/.atsign/keys/@${atsign}_key.atKeys';
+  final keysPath = '$homeDirectory/.atsign/keys/${atsign}_key.atKeys';
 
   AtSignLogger.defaultLoggingHandler = mcpLoggingHandler;
 
   AtOnboardingPreference atOnboardingConfig = AtOnboardingPreference()
-    ..hiveStoragePath = '$homeDirectory/.$namespace/storage'
-    ..namespace = namespace
-    ..downloadPath = '$homeDirectory/.$namespace/files'
+    ..hiveStoragePath = '$homeDirectory/.atsign/storage'
+    ..namespace = namespace ?? ''
+    ..downloadPath = '$homeDirectory/.atsign/files'
     ..isLocalStoreRequired = true
-    ..commitLogPath = '$homeDirectory/.$namespace/storage/commitLog'
+    ..commitLogPath = '$homeDirectory/.atsign/storage/commitLog'
     ..rootDomain = rootDomain
+    ..rootPort = rootPort
     ..fetchOfflineNotifications = true
     ..atKeysFilePath = keysPath;
 
