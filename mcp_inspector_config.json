@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "at-sign-tools": {
+      "command": "/Users/douglastodd/Projects/atsign/at_mcp_server/at_mcp_server.exe"
+    }
+  }
+}
