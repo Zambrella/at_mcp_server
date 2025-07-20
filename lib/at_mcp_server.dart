@@ -129,7 +129,7 @@ base class AtSignMCPServer extends MCPServer with ToolsSupport, LoggingSupport, 
   void addMarkdownDocsResources() {
     for (final doc in markdownDocs) {
       final resource = Resource(
-        uri: 'file://${doc.filename}',
+        uri: 'atsign:///${doc.filename}',
         name: doc.title,
         description: doc.description,
         mimeType: 'text/markdown',

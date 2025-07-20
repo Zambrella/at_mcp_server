@@ -1,6 +1,7 @@
 ## Notes
 
 - Build with `dart compile exe bin/main.dart -o at_mcp_server.exe`
+- For information on the MCP specification, see [here](https://modelcontextprotocol.io/docs/concepts/mcp).
 
 ## Features
 ### [Resources](https://modelcontextprotocol.io/docs/concepts/resources)
@@ -17,7 +18,7 @@
 - TODO: Other CRUD
 
 
-### Claude desktop configuration
+### Example Claude Desktop configuration
 ```json
 {
   "mcpServers": {
