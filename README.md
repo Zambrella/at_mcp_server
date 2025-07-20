@@ -9,6 +9,10 @@
 
 ### [Tools](https://modelcontextprotocol.io/docs/concepts/tools)
 - Get all atkeys
+  - Filter by
+    - Shared with
+    - Shared by
+    - Regex
 - Get value of atkey
 - TODO: Other CRUD
 
